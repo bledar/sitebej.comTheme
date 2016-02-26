@@ -1,0 +1,96 @@
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+@font-face {
+    font-family: AntonFont;
+    src: url(Anton.ttf);
+}
+html body {
+    font-size: 16px;
+    color: #000;
+    font-family:Arial, sans-serif;
+    height: 100%;
+}
+a{
+    color: inherit;
+    text-decoration: none;
+}
+header{
+    display: block;
+    width: 100%;
+}
+header .headerline{
+    margin: -40px 0 0 0;
+    height: 40px;
+    width: 100%;
+    background-color: #000;
+    box-shadow: 2px 2px 2px #666;
+}
+header .headerTitle {
+    font-family: AntonFont;
+    width: 50%;
+    position: relative;
+    display: block;
+    z-index: 10;
+}
+.wrapper{
+    width: 100%;
+    max-width:912px;
+    margin: auto;
+}
+.wrapper .headerTitle h1{
+    letter-spacing: 10px;
+    line-height: normal;
+    background-color: #fff;
+    color: #000;
+    font-size: 5em;
+}
+.wrapper .headerTitle h2{
+    background-color: #fff;
+    font-size: 2em;
+    text-align: center;
+}
+.wrapper h1 span{
+    color: rgb(248,71,56);
+}
+
+.menu-headermenu-container{
+    float: right;
+    margin: -2em 0 0 0;
+    width:50%;
+}
+.menu-headermenu{
+    width: 500%;
+    list-style: none;
+    text-align: left;
+}
+.menu li{
+    margin: 0 10px 0 0;
+    color: #efefef;
+    display: inline-block;
+    padding: 5px;
+    font-size: 1.2em;
+    text-transform: capitalize;
+    transition: all .3s;
+}
+
+.menu li.current-menu-item{
+    color: rgb(248,71,56);
+    font-weight: lighter;
+}
+
+.menu li:hover {
+     color: rgb(248,71,56);
+     transition: all .3s;
+}
+article{
+    min-height: 800px;
+    border:1px solid #666;
+}
+footer{
+    width: 100%;
+    min-height: 200px;
+    background-color: #666;
+}
