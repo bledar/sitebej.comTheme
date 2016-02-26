@@ -7,11 +7,13 @@ Template Name: Home template
 */
 	$headerNews = new WP_Query("post_type=post&posts_per_page=5");
 ?>
- <div class="owl-carousel owl-theme wrapper" id="headerSlider">
+<div class="sliderNews wrapper">
+ <div id="headerSlider">
  		<?php while($headerNews->have_posts() ):$headerNews->the_post();?>
-			<div class="item"><?php the_post_thumbnail("thumbnail"); the_title();?></div>
+			<?php the_post_thumbnail("thumbnail"); the_title();?>
 	<?php endwhile;?>
 
+ </div>
  </div>
 
 <article class="content wrapper">
