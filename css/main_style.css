@@ -28,31 +28,34 @@ header .headerline{
     background-color: #000;
     box-shadow: 2px 2px 2px #666;
 }
-header .headerTitle {
-    font-family: AntonFont;
-    width: 50%;
-    position: relative;
-    display: block;
-    z-index: 10;
-}
+
 .wrapper{
     width: 100%;
     max-width:912px;
     margin: auto;
 }
-.wrapper .headerTitle h1{
+.headerTitle {
+    width: 50%;
+    position: relative;
+    display: block;
+    z-index: 10;
+}
+.headerTitle h1{
+    font-family: AntonFont;
     letter-spacing: 10px;
     line-height: normal;
     background-color: #fff;
     color: #000;
     font-size: 5em;
 }
-.wrapper .headerTitle h2{
+.headerTitle h2{
     background-color: #fff;
     font-size: 2em;
     text-align: center;
+    font-weight: lighter;
+    font-family: inherit;
 }
-.wrapper h1 span{
+.headerTitle h1 span{
     color: rgb(248,71,56);
 }
 
@@ -62,16 +65,16 @@ header .headerTitle {
     width:50%;
 }
 .menu-headermenu{
-    width: 500%;
+    width: 50%;
     list-style: none;
     text-align: left;
 }
 .menu li{
-    margin: 0 10px 0 0;
+    margin: 0 5px 0 0;
     color: #efefef;
     display: inline-block;
     padding: 5px;
-    font-size: 1.2em;
+    font-size: .8em;
     text-transform: capitalize;
     transition: all .3s;
 }
@@ -94,8 +97,46 @@ footer{
     min-height: 200px;
     background-color: #666;
 }
-.sliderNews{
-    margin: 10px 0;
-    border-bottom: 1px solid #333;
-    border-top: 1px solid #333;
+.slider{
+    padding: 5px 0px;
+    margin: 10px auto;
+    display: block;
+    height: 200px;
+    border-top: 1px solid #666;
+    border-bottom: 1px solid #666;
+}
+.owl-carousel{
+    background-color: #f5f5f4;
+    padding: 10px 0 0 0;
+}
+.owl-carousel .sliderItem{
+    position: relative;
+    margin: 0px 10px;
+    height: 190px;
+    display: block;
+    overflow: hidden;
+}
+.sliderItem img{
+    min-width: 100%;
+    max-height: 120px;
+    width: auto;
+    height: auto;
+}
+.sliderItem h2{
+    padding:10px 0 0 0;
+    width: 100%;
+    bottom: 0px;
+    width: 85%;
+    font-size: 1em;
+    font-weight: lighter;
+    display: block;
+    position: absolute;
+    height: 56px;
+}
+.sliderItem a{
+    color: #222;
+    text-decoration: none;
+}
+.sliderItem a:hover{
+    text-decoration: underline;
 }
