@@ -10,6 +10,7 @@ Template Name: Home template
 		<?php while($headerNews->have_posts() ):$headerNews->the_post();?>
 			<div class="sliderItem">
 				<a href="<?php the_permalink();?>"><?php the_post_thumbnail("thumbnail");?>
+				<span class="date"><?php the_date();?></span>
 				<h2><?php the_title();?></h2></a>
 			</div>
 		<?php endwhile;?>

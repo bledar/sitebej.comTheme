@@ -6,9 +6,7 @@ $().ready(function(){
 		 itemsDesktopSmall : [900,3], // betweem 900px and 601px
 		 itemsTablet: [600,2], //2 items between 600 and 0
 		 itemsMobile : false, // itemsMobile disabled - inherit from itemsTablet option
-		 autoplay:true,
-		 autoplayTimeout:3000,
-		 autoplayHoverPause:true,
-		 loop:true
+		 autoPlay: 3000,
+		 stopOnHover:true
 	 });
 });
