@@ -50,3 +50,10 @@ function clean_setup () {
     remove_action( 'wp_print_styles', 'print_emoji_styles' );
 }
 add_action('after_setup_theme', 'clean_setup');
+function expert_more_str($more){
+	return sprintf( '<a class="readMore" href="%1$s">%2$s</a>',
+        get_permalink( get_the_ID() ),
+        __( 'Read More', 'textdomain' )
+    );
+}
+add_filter( 'excerpt_more', 'expert_more_str' );

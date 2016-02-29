@@ -10,7 +10,7 @@
 html body {
     font-size: 16px;
     color: #000;
-    font-family:Arial, sans-serif;
+    font-family:Arial, Helvetica, sans-serif;
     height: 100%;
 }
 a{
@@ -88,9 +88,47 @@ header .headerline{
      color: rgb(248,71,56);
      transition: all .3s;
 }
+.content{
+    margin: 30px auto;;
+}
 article{
     min-height: 800px;
-    border:1px solid #666;
+    width: 675px;
+}
+article a h2{
+    margin: 20px 0px 5px 0px;
+    width: 100%;
+    font-size: 1.7em;
+    line-height: 1em;
+    font-weight: 800;
+}
+article a h2:hover{
+    text-decoration: underline;
+}
+article .date{
+    width: 100%;
+    float: left;
+    font-size: .8em;
+    color: #666;
+}
+
+article .wp-post-image{
+    width: 100%;
+    height: auto;
+    margin: 10px auto;
+}
+article p .readMore{
+    width: 100%;
+    color: #333;
+    float: left;
+    font-size: 1em;
+    font-weight: 100;
+    margin: 20px 0px;
+    text-transform: uppercase;
+    font-weight: 100;
+}
+article p .readMore:hover{
+    color: rgb(248,71,56);
 }
 footer{
     width: 100%;

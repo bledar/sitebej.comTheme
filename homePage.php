@@ -3,6 +3,8 @@
 /**
 Template Name: Home template
 */
+global $more;
+$more = 1;
 	$headerNews = new WP_Query("post_type=post&posts_per_page=10");
 ?>
 <div class="slider wrapper">
@@ -16,15 +18,20 @@ Template Name: Home template
 		<?php endwhile;?>
 	</div>
  </div>
-
-<article class="content wrapper">
-	<?php while( have_posts() ):the_post();?>
-			<h1>have som data here</h1>
-			<h1><?php the_title();?></h1>
-			<p><?php the_content();?></p>
-
-	<?php endwhile;?>
-</article>
+<div class="wrapper content">
+	<article>
+		<?php while($headerNews->have_posts() ):$headerNews->the_post();?>
+				<a href="<?php the_permalink();?>">
+					<h2><?php the_title();?></h2>
+				</a>
+				<span class="date"><?php the_date();?></span>
+				<?php the_post_thumbnail();?>
+				<p>
+					<?php the_excerpt("Read more.."); ?>
+				</p>
+		<?php endwhile;?>
+	</article>
+</div>
 <?php
 	get_footer();
 ?>
