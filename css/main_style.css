@@ -351,6 +351,11 @@ footer{
         text-shadow: none;
         padding: 0px 5px;
     }
+    .menu-headermenu-container{
+        display: block;
+        float: left;
+        width: 100%;
+    }
     #navBTN{
         display: block;
     }
