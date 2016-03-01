@@ -58,7 +58,7 @@ nav h2{
 
 #navBTN{
     float: left;
-    display: block;
+    display: none;
     position: relative;
     overflow: hidden;
     margin: 0;
@@ -350,6 +350,9 @@ footer{
         color:#fff;
         text-shadow: none;
         padding: 0px 5px;
+    }
+    #navBTN{
+        display: block;
     }
     .wrapper{
         width: 100%;
