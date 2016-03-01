@@ -21,6 +21,7 @@ $more = 1;
 <div class="wrapper content">
 	<article>
 		<?php while($headerNews->have_posts() ):$headerNews->the_post();?>
+			<div class="postItems">
 				<a href="<?php the_permalink();?>">
 					<h2><?php the_title();?></h2>
 				</a>
@@ -29,6 +30,7 @@ $more = 1;
 				<p>
 					<?php the_excerpt("Read more.."); ?>
 				</p>
+			</div>
 		<?php endwhile;?>
 	</article>
 </div>
