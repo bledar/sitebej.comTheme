@@ -18,7 +18,7 @@ $more = 1;
 		<?php endwhile;?>
 	</div>
  </div>
-<div class="wrapper content">
+<div class="wrapper content cf">
 	<article>
 		<?php while($headerNews->have_posts() ):$headerNews->the_post();?>
 			<div class="postItems">
@@ -33,6 +33,27 @@ $more = 1;
 			</div>
 		<?php endwhile;?>
 	</article>
+	<div class="PinedPost sideBar">
+		<div class="title"><h2>Follow us!</h2></div>
+		<ul class="socialBTN cf">
+			<li><a href="#"><img src="<?php echo get_template_directory_uri();?>/images/facebook_btn.png" alt="facebook" /></a></li>
+			<li><a href="#"><img src="<?php echo get_template_directory_uri();?>/images/instagram_btn.png" alt="facebook" /></a></li>
+			<li><a href="#"><img src="<?php echo get_template_directory_uri();?>/images/g+_btn.png" alt="facebook" /></a></li>
+			<li><a href="#"><img src="<?php echo get_template_directory_uri();?>/images/youtube_btn.png" alt="facebook" /></a></li>
+		</ul>
+		<div class="title"><h2>Pined Post!</h2></div>
+		<?php
+		 	$PinedPost=new WP_Query("post_type=post&posts_per_page=5&category_name=PinedPost");
+			while($PinedPost->have_posts() ):$PinedPost->the_post();?>
+			<div class="PinedPostItems cf">
+				<a href="<?php the_permalink();?>">
+					<?php the_post_thumbnail();?>
+					<p><?php the_title();?></p>
+				</a>
+			</div>
+		<?php endwhile;?>
+		</div>
+	</div>
 </div>
 <?php
 	get_footer();

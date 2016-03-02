@@ -14,7 +14,7 @@
 				</a>
 			</div>
 		</header>
-		<nav>
+		<nav class="cf">
 			<div class="wrapper">
 				<button id="navBTN" for="checkMenu" class="c-hamburger c-hamburger--htx">
 					<span>toggle menu</span>
